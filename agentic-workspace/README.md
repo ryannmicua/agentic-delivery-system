@@ -23,6 +23,7 @@ Humans own intent, accountability, policy, and consequential decisions. Agents c
 7. [General Rules](06-general-rules.md) — rules that apply across the model.
 8. [Workspace Interface](07-workspace-interface.md) — the public boundary contract for workspace-to-workspace interaction.
 9. [Reference Scaffold](examples/reference-scaffold.md) — a small filesystem-backed example.
+10. [Workspace Builder Workflow](workflows/workspace-builder/workflow.md) — a five-stage route for designing, scaffolding, and validating a new workspace.
 
 ## Guiding Statement
 
