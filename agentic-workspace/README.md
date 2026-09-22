@@ -1,34 +1,77 @@
-# Agentic Workspace Core
+# Agentic Workspace
 
-**Version:** 0.1  
-**Status:** Proposed baseline
+Status: Approved baseline. The current contents of this package are approved.
 
-This package defines the smallest useful model for Agentic Workspaces, Capabilities,
-and Capability Implementations.
+An agentic workspace helps humans and AI agents understand the situation, identify
+what needs to change, and use available capabilities to produce and verify that
+change.
 
-## Purpose
+It provides a context-aware environment for work. Its value is how reliably an
+actor can find relevant information and act on it, with little setup or ceremony.
 
-Agentic Workspaces help humans and AI agents find the right context, understand their boundaries, use available capabilities, perform work, and return accepted results to authoritative locations.
+This package defines principles, conventions, and core rules. Implementation
+remains the practitioner's choice. Conformance depends on preserving the required
+behavior, not copying a directory layout, template, or tool selection.
 
-Humans own intent, accountability, policy, and consequential decisions. Agents carry out work within explicit authority.
+- **Principles** explain the intent behind the model.
+- **Core rules** define required behavior.
+- **Conventions** provide recommended defaults that may be adapted or replaced.
+- **Templates and examples** illustrate possible implementations; they may be
+  adopted, adapted, or replaced.
 
-## Read This Package
+The [core rules](04-conventions-and-rules.md) are the behavioral baseline. Setup
+guidance and examples do not add requirements through their format or structure.
 
-1. [Core Model](01-core-model.md) — the concepts and how they relate.
-2. [Workspace](02-workspace.md) — the workspace and its kernel.
-3. [Capabilities](03-capabilities.md) — six Capabilities, their contracts, and Capability Implementations.
-4. [Workflows and Runs](08-workflows-and-runs.md) — reusable workflow contracts, stages, isolated runs, acceptance, and ICM mapping.
-5. [Workspace Conventions](04-workspace-conventions.md) — rules every workspace follows.
-6. [Capability Conventions](05-capability-conventions.md) — rules for Capabilities and Capability Implementations.
-7. [General Rules](06-general-rules.md) — rules that apply across the model.
-8. [Workspace Interface](07-workspace-interface.md) — the public boundary contract for workspace-to-workspace interaction.
-9. [Reference Scaffold](examples/reference-scaffold.md) — a small filesystem-backed example.
-10. [Workspace Builder Workflow](workflows/workspace-builder/workflow.md) — a five-stage route for designing, scaffolding, and validating a new workspace.
+## Three core concepts
 
-## Guiding Statement
+| Concept | Question it answers |
+|---|---|
+| **Workspace** | What is this environment for, and where do I start? |
+| **Context** | What do I need to understand for this task, and where can I find it? |
+| **Work** | What needs to change, how will I do it, and how will I check the result? |
 
-> The kernel defines the environment. Capabilities define bounded functions. Capability Implementations realize them. Bindings connect requirements to implementations. Workflows compose them. Runs perform the work. Acceptance and promotion make results authoritative.
+Work includes actions, reusable procedures, workflows, runs, and outputs. Procedures
+describe how to perform a kind of task; workflows connect procedures or stages
+toward an outcome. A task can begin without either. Capabilities are the available means of doing
+work: people, skills, tools, services, or combinations of them.
+
+The basic loop is:
+
+```text
+Understand the request -> Discover enough context -> Act -> Check the result
+                                ^                    |            |
+                                +--------------------+------------+
+                                                      |
+                                      Update the relevant source of truth
+```
+
+New information can change the understanding of the problem or the next action.
+The loop describes useful behavior; it does not require stage records or gates.
+
+## Reading order
+
+1. [Workspace](01-workspace.md): the environment and its entry point.
+2. [Context](02-context.md): sources, discovery, resolution, and assembly.
+3. [Work](03-work.md): tasks, capabilities, procedures, workflows, runs, and results.
+4. [Conventions and core rules](04-conventions-and-rules.md): what implementations
+   must preserve and what they may choose.
+5. [Standing up a workspace](05-standing-up-a-workspace.md): setup and a practical
+   usability check.
+6. [Minimal example](examples/minimal-workspace.md): a copyable entry document and
+   an optional procedure.
+
+Implementing agents should read the five short core documents before designing a
+workspace. Actors using an established workspace start at its entry point and
+follow only the routes needed for their task.
 
 ## Scope
 
-This package defines the conceptual model and its conventions. Detailed schemas, runtime integrations, folder scaffolds, and domain-specific workflows may implement this model but must not redefine it.
+This package is self-contained. It does not require the previous workspace model
+or the team package to implement it. The team model's real-world context, problem
+space, and capability questions inform the approach; its readiness gates and
+other operating practices are not prerequisites.
+
+A workspace can start with one short entry document pointing to existing
+resources. There is no required runtime, folder structure, capability registry,
+interface layer, approval process, or separate run database. Add structure when
+actual work needs it.
