@@ -27,11 +27,37 @@ required.
    authorize an action. The workspace need not create another permission system.
 6. **Connect actions to an outcome and a check.** Know what the task is trying to
    achieve and check the result proportionately. State failures and uncertainty.
-7. **Leave work understandable.** Keep enough in the existing work record to find
-   the result, understand material decisions, and resume unfinished work.
-8. **Keep shared guidance consistent.** Maintain each workspace-owned instruction
-   or durable decision at a designated home and link to it elsewhere. Update
-   affected guidance when work makes it misleading.
+7. **Leave ticketed work traceable.** Any work performed under a ticket, whether
+   or not it is part of a named workflow, must leave an activity and change
+   audit trail in the existing ticket or linked work record. Capture each
+   material action, who or what performed it and when, capabilities used,
+   systems or artifacts inspected or changed, outcomes, handoffs, and evidence
+   as work proceeds. Identify each affected resource and its resulting state, or
+   link to a record that does.
+   Include failed or no-change attempts when material, and state when the ticket
+   resulted in no change. Link detailed system audit records when required by
+   local policy; do not copy secrets or unnecessary sensitive values. Keep enough
+   context to understand decisions, find results, and resume unfinished work.
+8. **Keep sources aligned with verified reality and learning.** Update the
+   authoritative source when verified facts change, or make a discrepancy
+   visible when the source cannot be changed. Preserve the distinction between
+   intended and observed state. Keep shared guidance at its designated home and
+   promote durable learning from runs there; leave one-off details in the work
+   record.
+9. **Organize for correct outcomes.** Derive the simplest useful arrangement of
+   information, capabilities, work records, handoffs, and checks from
+   representative tasks. Evaluate whether intended humans and agents can
+   complete those tasks correctly and maintain documented state against verified
+   reality.
+10. **Make runs restart-safe.** Keep the goal, material decisions, completed
+    actions and evidence, next intended action, and uncertain external outcomes
+    in a durable recovery record. Before a consequential external action, record
+    the intended action as pending; afterward record its confirmed outcome or
+    retain its uncertain status. On restart, read the record and inspect current
+    external state; reconcile uncertain actions before retrying. Use operation
+    IDs, idempotent actions, or a current-state or audit-history check to avoid
+    duplicate effects and stale assumptions. Delay action when its outcome cannot
+    yet be established safely.
 
 ## Conventions
 

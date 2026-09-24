@@ -10,6 +10,7 @@ Do not be overly agreeable but instead by anti-sychophant. Not all ideas are sou
 
 - [`agentic-workspace/`](agentic-workspace/) is the conceptual baseline. It defines the workspace kernel, Capabilities, Capability Implementations, bindings, workflows, runs, evidence, acceptance, promotion, and maintenance.
 - [`agentic-team/`](agentic-team/) is the applied operating-model package. It contains working drafts for readiness gates, evidence, failure classification, and validation.
+- [`workspace-builder/`](workspace-builder/README.md) applies the approved workspace baseline to creating workspaces, adapting existing environments, and authoring reusable procedures or workflows. Start there for builder work.
 
 ## Start here
 

@@ -13,6 +13,12 @@ Identify its purpose, common requests, existing context sources, available
 capabilities, and where results already live. Read applicable local instructions.
 Prefer existing resources over new documents that repeat them.
 
+Before choosing an organization, trace a representative task through the
+information it needs, source authority and freshness, actual actor capabilities
+and access, actions, handoffs, outputs, checks, and the record of what happened.
+Choose the simplest arrangement that supports the task and maintenance of its
+sources; do not start from a folder taxonomy.
+
 Do not guess system access or invent organizational rules. Mark an unknown when
 it affects setup; ask for clarification if it prevents a useful implementation.
 
@@ -53,7 +59,13 @@ Check whether the actor can:
 - find useful context without reading unrelated material;
 - distinguish current facts, defaults, constraints, and unresolved questions;
 - locate the capabilities needed to act;
-- identify the output destination and an appropriate result check.
+- identify the output destination and an appropriate result check;
+- update the appropriate source with verified changes, or leave a discrepancy
+  visible when the authoritative source cannot be updated;
+- leave a ticket activity trail with actions, changes, outcomes, and evidence;
+- identify where any durable learning belongs;
+- resume from a durable record in a fresh session, reconciling uncertain external
+  actions against current system state before retrying them.
 
 Fix gaps the trial exposes. If a necessary source or capability is unavailable,
 record the specific limitation rather than declaring the setup fully usable.
@@ -61,10 +73,13 @@ Report whether the trial included execution or only a walkthrough.
 
 ## Completion
 
-The initial workspace is usable when its entry point and routes support the
-representative task, required capabilities are available, and work has a clear
-destination and check. Report the entry point, what was tried, and remaining
-limitations. Empty scaffolding does not establish usability.
+The initial workspace is usable when intended actors can complete the
+representative task correctly through available capabilities, verify the result,
+keep documented state aligned with verified reality (or expose a discrepancy),
+leave a traceable work record, and safely resume after interruption from that
+record and the current external state. Promote durable learning when a run reveals
+it. Report the entry point, what was tried, and remaining limitations. Empty
+scaffolding does not establish usability.
 
 After that, let actual usage determine additions. A missed source suggests a
 better route. Repeated steps may justify a procedure. Difficulty resuming work may

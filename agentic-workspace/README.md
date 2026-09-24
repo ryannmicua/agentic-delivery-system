@@ -48,6 +48,23 @@ Understand the request -> Discover enough context -> Act -> Check the result
 New information can change the understanding of the problem or the next action.
 The loop describes useful behavior; it does not require stage records or gates.
 
+## Organize around outcomes
+
+An agentic workspace organizes the information and work needed to produce an
+outcome through capabilities its actors can actually use. Treat the arrangement
+of sources, records, routes, and workflows as a design choice derived from
+representative work.
+
+Trace what the task needs to know and change, where each fact is maintained and
+how its authority and freshness are checked, which people or tools can act, what
+handoffs occur, and where results, activity trails, and durable learning belong.
+Use the simplest arrangement that supports reliable work. Evaluate it with
+representative tasks: can humans and agents complete them correctly, keep
+documented state aligned with verified reality, leave an activity and change
+audit trail for ticketed work, promote durable learning, and resume interrupted
+runs from durable records without lost work, repeated consequential changes, or
+stale assumptions?
+
 ## Reading order
 
 1. [Workspace](01-workspace.md): the environment and its entry point.

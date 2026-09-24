@@ -86,6 +86,12 @@ check its scope and freshness, and seek an observation or authoritative record
 that can settle the question. A newer source is not automatically more reliable,
 and an authoritative plan does not prove that implementation matches it.
 
+For work that changes a live system, verify material current-state facts against
+an authorized, sufficiently fresh source or observation. Keep approved or
+intended state distinct from observed state. Record when and how an observation
+was made when that affects trust in the result. A detected difference is evidence
+of drift; it does not by itself authorize changing the intended state.
+
 ## Assembly
 
 **Assembly** selects and combines the resolved context into a useful working view.

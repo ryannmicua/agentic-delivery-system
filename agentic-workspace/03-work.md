@@ -68,6 +68,22 @@ For short work these can be the request and final response; longer work may need
 a persistent task note. A separate run ID, directory, or status schema is not
 required if the existing system already distinguishes tasks adequately.
 
+### Restart safety
+
+Make each work run safe to resume from a fresh session. Keep a durable recovery
+record, not only active-session context, with the goal, material decisions,
+completed actions and evidence, next intended action, and any action whose
+external outcome is uncertain. The ticket or existing task record may also
+serve as this recovery record. Before a consequential external action, durably
+record the intended action as pending; afterward record its confirmed outcome or
+leave it marked uncertain. Include an operation ID when available. On restart,
+read the record and inspect current state in relevant external systems before
+continuing. Reconcile uncertain actions before retrying them. Use idempotent
+actions where available; otherwise read current state or audit history before
+repeating a consequential action. If evidence cannot settle whether it happened,
+delay the action and use a safe recovery path. A restart should not lose work,
+duplicate consequential changes, or silently accept stale state.
+
 An **output** is material produced or changed during work. Edit the intended file
 or system directly when that is the ordinary authorized way to do the task. Use
 a draft, branch, or separate output location when review, concurrent work, or
@@ -80,6 +96,19 @@ Choose a check appropriate to the requested change. Examples include executing
 affected tests, comparing a document against its source, trying a procedure, or
 confirming an updated system value. A claim of completion is not itself a check.
 
+Any work performed under a ticket, whether or not it is part of a named workflow,
+must leave an activity and change audit trail in the existing ticket or linked
+work record. Record who or what performed each material action and when, the
+actions and capabilities used, relevant systems or artifacts inspected or
+changed, outcomes, handoffs, and evidence. For a change, identify the affected
+resource and resulting state or link to a record that does; include failed or
+no-change attempts when material. Capture the trail as work proceeds, and state
+explicitly when the ticket resulted in no change.
+Link to detailed system audit records when needed to meet local audit requirements;
+do not copy secrets or unnecessary sensitive values into the ticket. The trail
+must let an authorized reader understand what happened and find supporting
+evidence.
+
 Report what changed, where the result is, how it was checked, and any material
 limitation. If the check fails or cannot be performed, say so and correct the
 problem or identify what remains. Do not report an unverified outcome as verified.
@@ -88,6 +117,11 @@ Put durable results in the intended destination. Update related context when the
 work changes facts or instructions that future tasks will depend on. A new
 observation does not require a new knowledge document if it belongs in an existing
 source.
+
+When a run reveals durable learning, promote it to the appropriate existing
+source of truth, standard, procedure, or other maintained guidance. Keep
+one-off details in the work record; do not create a new knowledge artifact for
+every ticket.
 
 Checking, review, and publication can be distinct activities when the task needs
 them. The baseline does not require separate acceptance or promotion machinery.
