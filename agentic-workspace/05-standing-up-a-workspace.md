@@ -48,6 +48,8 @@ offer a useful template; adapt or replace that format as needed. Otherwise,
 explain how a one-off request starts and where its
 result should go. Do not manufacture a procedure to fill a template. Add a workflow
 only when the work benefits from an explicit route connecting procedures or stages.
+For work with several handoffs, the [staged workflow example](examples/staged-workflow.md)
+shows a compact way to describe the route without prescribing a folder structure.
 
 ## 5. Try one representative task
 

@@ -52,6 +52,23 @@ connect procedures for correcting guides, reviewing changes, and publishing the
 release. Describe the connections and relevant decisions; link to the procedures
 instead of duplicating their instructions.
 
+When documenting a workflow, make it possible for an actor to find:
+
+- when to use it and the outcome it aims to produce;
+- the stages or procedures, their order or dependencies, and any optional paths;
+- what each stage consumes and produces, where its result belongs, and how the
+  result is checked before a handoff;
+- who or what makes material decisions and where those decisions are recorded;
+- the context and capabilities each stage needs, with links to their maintained
+  sources; and
+- where a run retains progress, evidence, and uncertain actions for safe resumption.
+
+Describe only the parts the work needs. A workflow with several artifact handoffs
+may use a short entry page linking to stage instructions, shared references, and
+output locations. Keep reusable instructions separate from the results of a
+particular run. The [staged workflow example](examples/staged-workflow.md) shows
+one possible arrangement.
+
 Procedures and workflows are optional. A task may use either, adapt its defaults,
 or proceed without a predefined route. An adaptation still respects applicable
 constraints and the requested outcome.

@@ -4,6 +4,10 @@ A workspace is an environment organized around a coherent purpose. It brings
 together routes to context, available capabilities, and places to perform and
 retain work.
 
+A workspace may support one workflow or several kinds of work. A workflow
+describes a route toward an outcome; the workspace makes the context,
+capabilities, and work locations needed for that route discoverable.
+
 It may be implemented in a repository, shared folder, document system, application,
 or a combination of systems. Physical containment is optional: a workspace can
 reference a source without copying it locally.
